@@ -1,0 +1,33 @@
+<div ng-show="count > 0">
+	<button type="button" ng-click="clearItems();" class="btn btn-primary">Clear Items</button><br/><br/><br/>
+
+	<h3>Order Info</h3>
+	<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+		<span class="input-group-text" id="basic-addon1">username</span>
+	  </div>
+	  <input type="text" class="form-control" ng-model="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+	</div>
+
+	<div class="input-group mb-3">
+	  <div class="input-group-prepend">
+		<span class="input-group-text" id="basic-addon1">email</span>
+	  </div>
+	  <input type="text" class="form-control" ng-model="email" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+	</div><br/><br/>
+
+	<button type="button" ng-click="makePurchase();" class="btn btn-primary">Purchase</button>
+	<h1 style="color: red;">{{response}}</h1>
+
+	<h3>All products for sale</h3>
+	<div class="row" ng-repeat="item in items">
+		<div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+		<p><strong>{{item.name}}</strong>, Price: {{item.price}}</p>
+		<img
+		  ng-src="images/{{item.image}}"
+		  class="w-100 shadow-1-strong rounded mb-4"
+		  alt=""
+		  width="100" height="100"
+		/><hr>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+CREATE TABLE `items` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) NOT NULL,
+  `image` varchar(100) NOT NULL,
+  `price` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `items` (`id`, `name`, `image`, `price`) VALUES 
+  (3, 'test1', 'image1.jpg', 10),
+  (4, 'test2', 'image2.jpg', 20),
+  (5, 'test3', 'image3.jpg', 30),
+  (6, 'test4', 'image4.jpg', 40),
+  (7, 'test5', 'image5.jpg', 50);

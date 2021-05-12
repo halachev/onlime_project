@@ -1,0 +1,13 @@
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">-Select Items- 
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu" style="background: #d8e0e6;">
+    <li ng-repeat="item in items" style="text-align:center; padding: 10px;" >
+		<a ng-click="addItem(item);" href="#">
+		<img src="images/{{item.image}}" class="img-rounded" alt="{{item.image}}" width="75" height="75"> 
+		<p><strong>{{item.name}}</strong>, Price: {{item.price}}</p><hr>
+		</a>
+	</li>
+  </ul>
+</div>
+<h1 style="color: red;">{{response}}</h1>
