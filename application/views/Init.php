@@ -35,7 +35,16 @@
 					<li><a href="#/items">Items for sale <span style="color: red;">({{count}})<span></a></li>
 				</ul>
 			</div>
-		</div>
+			<div class="col-sm-2 col-md-2 pull-left">
+				
+				<div class="input-group">
+					<input type="text" class="form-control" ng-model="itemName" placeholder="Search" name="srch-term" id="srch-term">
+					<div class="input-group-btn">
+						<button class="btn btn-default" ng-click="search()"><i class="glyphicon glyphicon-search"></i></button>
+					</div>
+				</div>
+				
+			</div>
 	</nav>
 
 	<div class="container"><ng-view></ng-view></div>

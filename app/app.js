@@ -59,6 +59,11 @@ app.factory('service', function($q, $rootScope){
 				$rootScope.count = 0;
 				$rootScope.items = [];	
 			}
+			
+			var mainObject = this;
+			$rootScope.search = function(){
+			   mainObject.search($rootScope.itemName);
+			}
 		},
 		request : function (url, params) {
 			var d = $q.defer();
@@ -167,6 +172,18 @@ app.factory('service', function($q, $rootScope){
 				window.location = "#";
 			}
 			
+		},
+		
+		search: function(itemName){
+			
+			this.request('items/search/' + itemName,
+				{}, function(res){
+			
+			   }).then(function (res){
+				   
+				   $rootScope.item = res.data[0];
+				   $rootScope.searchCount = res.data.length;
+			   });
 		}
 		
 	}

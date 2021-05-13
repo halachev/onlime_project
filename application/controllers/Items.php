@@ -46,4 +46,12 @@ class Items extends CI_Controller {
 		
 	}
 	
+	function search($itemName){
+		$this->db->where('name', $itemName);
+		$query = $this->db->get("items");
+		$data['data'] = $query->result();
+		
+		echo json_encode($data);
+	}
+	
 }

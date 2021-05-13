@@ -11,3 +11,8 @@
   </ul>
 </div>
 <h1 style="color: red;">{{response}}</h1>
+
+<div ng-show="searchCount > 0">
+	<img src="images/{{item.image}}" class="img-rounded" alt="{{item.image}}" width="200" height="200"> 
+	<p><strong>{{item.name}}</strong>, Price: {{item.price}}</p><hr>
+</div>
